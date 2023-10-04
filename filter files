@@ -1,2 +1,5 @@
 #Delete files based on keywords and path, this will delete files that starts with star and has either .pdf or .xml extension
 find /home/user/documents -type f \( -name "star*.xml" -o -name "star*.pdf" \) -exec rm {} \;
+
+#locate files based on keyword
+find / -maxdepth 7 -name *.<file_extension> -type f -exec grep -Hn <keyword> {} \; 2>/dev/null
